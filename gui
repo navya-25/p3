@@ -1,0 +1,49 @@
+
+import tkinter as tk
+#import tkinter as ttk
+from tkinter import*
+window = tk.Tk()
+tk.Label(window,text="Custid").grid(row =0)
+tk.Label(window,text="Customer Name").grid(row =1)
+tk.Label(window,text="Branch").grid(row =2)
+tk.Label(window,text="account type").grid(row =3)
+tk.Label(window,text="Amount").grid(row =4)
+
+e1=tk.Entry(window).grid(row=0,column=1)
+e2=tk.Entry(window)
+e3=tk.Entry(window)
+e3.insert(0,"adyar")
+#e4=tk.Entry(window)
+#menu=StringVar()
+#menu.set("Select AGE")
+var=tk.IntVar()
+r1=Radiobutton(window,text="Saving",variable=var,value=1)
+r2=Radiobutton(window,text="Non Saving",variable=var,value=2)
+#spin=Spinbox(window,from_=12,to=35)
+#drop=OptionMenu(window,menu,"19","20","21","22")
+v1=DoubleVar()
+s1=Scale(window,variable=v1,from_=15,to=30,orient=HORIZONTAL)
+
+
+
+
+#tk.Button(window,text="").grid(row=5,column=1)
+
+e2.grid(row=1,column=1)
+e3.grid(row=2,column=1)
+#e4.grid(row=3,column=1)
+r1.grid(row=3,column=1)
+r2.grid(row=3,column=2)
+s1.grid(row=4,column=1)
+tk.Button(window,text="Insert").grid(row=5,column=0)
+tk.Button(window,text="Update").grid(row=5,column=1)
+tk.Button(window,text="Delete").grid(row=6,column=0)
+tk.Button(window,text="Select").grid(row=6,column=1)
+var1 = IntVar()
+var2 = IntVar()
+var3 = IntVar()
+rb = tk.Radiobutton(text="op1",variable = var1,value = "1").grid(row = 15,column = 1)
+rb = tk.Radiobutton(text="op2",variable = var2,value = "2").grid(row = 16,column = 1)
+rb = tk.Radiobutton(text="op2",variable = var3,value = "3").grid(row = 17,column = 1)
+window.mainloop()
+
